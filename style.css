@@ -1,0 +1,57 @@
+/*reset css*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+}
+body{
+    width: 100dvw;
+    height: 100dvh;
+    display: flex; 
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2e2c2c2a;
+    padding: 10px;
+    text-align: center;
+}
+header > div > h2{
+    background-color: #80808052;
+    padding: 2px;
+}
+header nav{
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background-color: bisque;
+}
+main > div > h2{
+    background-color: #80808052;
+    padding: 2px;
+}
+section{
+    display: flex; 
+    padding: 20px;   
+    background-color: cornsilk;
+    justify-content: space-between;
+}
+section>div>img{
+    height: 600px;
+    width: 600px;
+}
+section>article>div{
+    margin: 10px;
+}
+section>article>div{
+    background-color: #80808052;
+    padding: 2px;
+}
+
