@@ -10,6 +10,11 @@ body{
     display: flex; 
     flex-direction: column;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -17,41 +22,55 @@ header{
     padding: 10px;
     text-align: center;
 }
-header > div > h2{
-    background-color: #80808052;
-    padding: 2px;
-}
 header nav{
     display: flex;
     gap: 10px;
     border-radius: 10px;
+}
+input{
+    text-align: center;
 }
 main{
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 50px;
-    background-color: bisque;
+
 }
-main > div > h2{
-    background-color: #80808052;
-    padding: 2px;
+.border{
+      color: #222;
+      border: 1.5px solid #888;
+      border-radius: 6px;
+      padding: 4px 12px;
+      background: #ddd;
 }
 section{
     display: flex; 
     padding: 20px;   
     background-color: cornsilk;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 section>div>img{
-    height: 600px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+    padding: 20px;
 }
 section>article>div{
     margin: 10px;
+    padding: 12px 14px;
 }
-section>article>div{
-    background-color: #80808052;
-    padding: 2px;
+.buttonEnd{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 3px;
+    gap: 20px;
 }
-
+.buttonEnd button {
+    flex: 1;              
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 2px;
+}
