@@ -47,14 +47,13 @@ main{
 section{
     display: flex; 
     padding: 20px;   
-    background-color: cornsilk;
     justify-content: center;
     gap: 20px;
 }
 section>div>img{
     height: 500px;
     width: 500px;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 20px;
 }
 section>article>div{
