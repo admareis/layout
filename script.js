@@ -8,48 +8,68 @@
 //const urlString = `https://api.disneyapi.dev/character?name=${nome}`;
 //const urlId = `https://api.disneyapi.dev/characters/${id}`;
 
-//async function getUrl(url) {
-    //const dados = await((await fetch(url)).json())
-    //return dados;
-//}
-// Captura o campo de texto do HTML pelo id="buscar"
+// Captura input" // 
 const input = document.querySelector('#buscar');
+const btn = document.querySelector('#btnEnviar');
+const imagem = document.querySelector('#imagem');
+const nome = document.querySelector('#nome');
+const id = document.querySelector('#id');
+const filmes = document.querySelector('#filmes');
+const series = document.querySelector('#series');
 
-// Captura o botão do HTML
-const btn = document.querySelector('button');
+// o "async" permite usar o await dentro da função //
+btn.addEventListener('click', async (e) => {
 
-// Fica "escutando" o clique no botão
-// o "async" permite usar o await dentro da função
-btn.addEventListener('click', async (event) => {
+    // Impede a página de recarregar ao clicar no botão //
+    e.preventDefault();
 
-    // Impede a página de recarregar ao clicar no botão
-    event.preventDefault();
-
-    // Pega o texto que o usuário digitou no input
+    // Pega o texto que o usuário digitou no input //
     const valor = input.value;
 
-    // isNaN verifica se o valor NÃO é um número
-    // isNaN("mickey") → true  (é texto)
-    // isNaN("4703")   → false (é número)
     if (isNaN(valor)) {
-
-        // Se for texto → monta a URL com o nome
-        // await pausa até o fetch terminar de buscar
+        // monta a URL com o !NOME!//
         const resposta = await fetch(`https://api.disneyapi.dev/character?name=${valor}`);
+        const dados = await resposta.json();   
+        const personagem = dados.data[0]; // dados.data[0] pega o primeiro personagem da lista //
+        imagem.src = personagem.imageUrl;
+        nome.textContent = `Nome: ${personagem.name}`;
+        id.textContent = `ID: ${personagem._id}`;
+        filmes.textContent = `Filmes: ${personagem.films}`;
+        series.textContent = `Séries: ${personagem.tvShows}`;
 
-        // await pausa até converter a resposta em JSON
-        const dados = await resposta.json();
+        if (personagem.films.length > 0) { // verifica se tem pelo menos um item // 
+        filmes.textContent = `Filmes: ${personagem.films}`;
+        } else {
+        filmes.textContent = "Filmes: Nenhum filme encontrado";
+        }
 
-        // Exibe o resultado no console
-        console.log(dados);
+        if (personagem.tvShows.length > 0) {
+        series.textContent = `Séries: ${personagem.tvShows}`;
+        } else {
+        series.textContent = "Séries: Nenhuma série encontrada";
+        }
 
     } else {
-
-        // Se for número → monta a URL com o ID
+        // ID //
         const resposta = await fetch(`https://api.disneyapi.dev/characters/${valor}`);
-
         const dados = await resposta.json();
+        const personagem = dados.data; 
+        imagem.src = personagem.imageUrl;
+        nome.textContent = `Nome: ${personagem.name}`;
+        id.textContent = `ID: ${personagem._id}`;
+        filmes.textContent = `Filmes: ${personagem.films}`;
+        series.textContent = `Séries: ${personagem.tvShows}`;
 
-        console.log(dados);
+       if (personagem.films.length > 0) { //. lenght verifica 
+        filmes.textContent = `Filmes: ${personagem.films}`;
+        } else {
+        filmes.textContent = "Filmes: Nenhum filme encontrado";
+        }
+
+        if (personagem.tvShows.length > 0) {
+        series.textContent = `Séries: ${personagem.tvShows}`;
+        } else {
+        series.textContent = "Séries: Nenhuma série encontrada";
+        }
     }
 });

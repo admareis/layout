@@ -9,16 +9,18 @@ body{
     height: 100dvh;
     display: flex; 
     flex-direction: column;
+    
 }
 .container{
     display: flex;
     flex-direction: column;
     flex: 1;
+    background: linear-gradient(#fffd82a8, #ff9c7181, #e8485575, #b56a458f, #2b3a678f);
 }
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #2e2c2c2a;
+    background-color: #c4baba51;
     padding: 10px;
     text-align: center;
 }
@@ -26,6 +28,7 @@ header nav{
     display: flex;
     gap: 10px;
     border-radius: 10px;
+    margin-right: 20px;
 }
 input{
     text-align: center;
@@ -42,12 +45,13 @@ main{
       border: 1.5px solid #888;
       border-radius: 6px;
       padding: 4px 12px;
-      background: #ddd;
+      background: #dddddd8e;
 }
 section{
     display: flex; 
     padding: 20px;   
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 section>div>img{
