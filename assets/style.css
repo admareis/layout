@@ -13,15 +13,14 @@ body{
 }
 .container{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
     flex: 1;
     background: linear-gradient(#fffd82a8, #ff9c7181, #e8485575, #b56a458f, #2b3a678f);
 }
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #181717c8;
+    background-color: #000;    
     padding: 10px;
     text-align: center;
 }
