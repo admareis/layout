@@ -1,43 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>DISNEY</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="border"><h2>API DISNEY</h2></div>
-        <nav>
-        
-        <input type="search" name="nome" id="buscar" placeholder="Digite a sua busca">
-        
+      <div class="border"><h2>API DISNEY</h2></div>
+      <nav>
+        <input type="search" name="nome" id="buscar" placeholder="Digite a sua busca"/>
+
         <button id="btnEnviar">ENVIAR</button>
-        </nav>
+      </nav>
     </header>
 
     <div class="container">
-
-    <main>
+      <main>
         <div class="border"><h2>Explore os personagens Disney</h2></div>
-    </main>
-    
-    <section>        
-        <div><img src="disney_and_pixar_characters_wallpaper_by_gikesmanners1995_dkr4zg1-fullview.jpg" alt="IMG" id="imagem"></div>
+        <p id="mensagemErro"></p>
+      </main>
+
+      <section>
+        <div>
+          <img
+            src="disney_and_pixar_characters_wallpaper_by_gikesmanners1995_dkr4zg1-fullview.jpg"
+            alt="NENHUMA IMAGEM ENCONTRADA"
+            id="imagem"
+          />
+        </div>
         <article>
-            <div class="border"><h3 id="nome">Nome:</h3></div>
-            <div class="border"><h3 id="id">ID:</h3></div>
-            <div class="border"><h3 id="filmes">Filmes:</h3></div>
-            <div class="border"><h3 id="series">Séries:</h3></div>
-            
-            <div class="buttonEnd">
+          <div class="border"><h3 id="nome">Nome:</h3></div>
+          <div class="border"><h3 id="id">ID:</h3></div>
+          <div class="border"><h3 id="filmes">Filmes:</h3></div>
+          <div class="border"><h3 id="series">Séries:</h3></div>
+
+          <div class="buttonEnd">
             <button id="btnVoltar">VOLTAR</button>
             <button id="btnAvancar">AVANÇAR</button>
-            </div>
+          </div>
         </article>
-    </section>    
+      </section>
     </div>
-</body>
+  </body>
 </html>

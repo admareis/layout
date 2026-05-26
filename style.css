@@ -14,13 +14,14 @@ body{
 .container{
     display: flex;
     flex-direction: column;
+    
     flex: 1;
     background: linear-gradient(#fffd82a8, #ff9c7181, #e8485575, #b56a458f, #2b3a678f);
 }
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #c4baba51;
+    background-color: #181717c8;
     padding: 10px;
     text-align: center;
 }
@@ -30,15 +31,20 @@ header nav{
     border-radius: 10px;
     margin-right: 20px;
 }
+
 input{
     text-align: center;
+    border-radius: 8px solid #000;
 }
 main{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 50px;
-
+    flex-direction: column;
+    padding: 20px;
+}
+main>p{
+    margin: 20px;
 }
 .border{
       color: #222;
@@ -52,6 +58,7 @@ section{
     padding: 20px;   
     justify-content: center;
     align-items: center;
+    
     gap: 20px;
 }
 section>div>img{
@@ -76,4 +83,7 @@ section>article>div{
     cursor: pointer;
     padding: 8px;
     border-radius: 2px;
+}
+#btnEnviar{
+    cursor: pointer;
 }
