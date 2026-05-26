@@ -16,11 +16,12 @@ body{
     flex-direction: column;    
     flex: 1;
     background: linear-gradient(#fffd82a8, #ff9c7181, #e8485575, #b56a458f, #2b3a678f);
+    
 }
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #000;    
+    background-color: #fff;    
     padding: 10px;
     text-align: center;
 }
@@ -30,7 +31,13 @@ header nav{
     border-radius: 10px;
     margin-right: 20px;
 }
-
+header>div{
+    display: flex;
+}
+header>div>img{
+    justify-content: center;
+    align-items: center;
+}
 input{
     text-align: center;
     border-radius: 8px solid #000;
@@ -50,25 +57,38 @@ main>p{
       border: 1.5px solid #888;
       border-radius: 6px;
       padding: 4px 12px;
-      background: #dddddd8e;
+      background: #dddddd8e;      
 }
 section{
     display: flex; 
     padding: 20px;   
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
     gap: 20px;
 }
+
+section > div {
+    width: 500px;   
+    height: 500px;  
+    flex-shrink: 0; /*impede que a imgm encolha de tamanho */
+}
 section>div>img{
-    height: 500px;
-    width: 500px;
+    max-height: 500px;
+    max-width: 700px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     border: 1px solid black;
     padding: 20px;
 }
-section>article>div{
+section > article > div {
     margin: 10px;
     padding: 12px 14px;
+    overflow-y: auto;    /*aparece scroll se descrição passar da altura */
+}
+
+section > article > div > h3 {    
+    word-break: break-word; /* quebra descrições longas */
 }
 .buttonEnd{
     display: flex;
