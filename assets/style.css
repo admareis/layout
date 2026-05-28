@@ -12,11 +12,14 @@ body{
     
 }
 .container{
+    background-image: url(imagens/disney-computer-wallpaper-b75witeqfxx1656c.jpg);
     display: flex;
     flex-direction: column;    
-    flex: 1;
-    background: linear-gradient(#fffd82a8, #ff9c7181, #e8485575, #b56a458f, #2b3a678f);
-    
+    flex: 1;    
+}
+.container>main>img{
+    width: 100dvw;
+    height: 100dvh;
 }
 header{
     display: flex;
