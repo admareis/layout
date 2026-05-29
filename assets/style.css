@@ -66,8 +66,9 @@ section{
     display: flex; 
     padding: 20px;   
     justify-content: center;
-    align-items: center;    
+    align-items: center;        
     gap: 20px;
+    margin: 0 auto;
 }
 
 section > div {
@@ -85,14 +86,17 @@ section>div>img{
     padding: 20px;
 }
 section > article > div {
+    height: 60px;
     margin: 10px;
     padding: 12px 14px;
-    overflow-y: auto;    /*aparece scroll se descrição passar da altura */
+    word-break: break-word;
+    overflow-y: auto;    
+}
+article{
+    width: 500px;
+    height: 500px;
 }
 
-section > article > div > h3 {    
-    word-break: break-word; /* quebra descrições longas */
-}
 .buttonEnd{
     display: flex;
     justify-content: space-between;
