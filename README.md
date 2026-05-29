@@ -15,17 +15,11 @@ Projeto desenvolvido para pesquisar de forma interativa vários personagens do U
 - JavaScript 
 - [Disney API](https://disneyapi.dev/) 
 
-# Estrutura do projeto: 
+# Autor: 
 
-projeto/
-├── index.html
-├── assets/
-│   ├── script.js
-│   ├── style.css
-│   └── imagens/
-│       └── logo.png
+https://github.com/admareis
 
+# Como acessar? 
 
-
-
+https://github.com/admareis/layout
 
